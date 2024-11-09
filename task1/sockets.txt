@@ -1,3 +1,0 @@
-State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
-LISTEN 0      32           0.0.0.0:53        0.0.0.0:*          
-LISTEN 0      32              [::]:53           [::]:*          
