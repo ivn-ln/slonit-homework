@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ip=$(route | grep -P "^default" | grep -Po "[^ ]*$")
-echo Active ipv4 interface: $ip
+ip=$(ip a | grep -Po "inet \K.*(?= brd.*scope global)" )
+echo Active interface ipv4: $ip
 mkfifo pipe
 ss -plnt > pipe &
 cat pipe > sockets.txt
