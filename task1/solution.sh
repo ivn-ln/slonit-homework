@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ip=$(ip a | grep -P "inet.*global dynamic")
+ip=$(route | grep -P "^default" | grep -Po "[^ ]*$")
 echo Active ipv4 interface: $ip
 mkfifo pipe
 ss -plnt > pipe &
